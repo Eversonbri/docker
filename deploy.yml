@@ -18,5 +18,5 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-        image: sa-saopaulo-1.ocir.io/grsqygwqjecz/useall:1.0
+        image: grsqygwqjecz/useall:1.0
 
