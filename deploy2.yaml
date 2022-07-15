@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eversonbri-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: eversonbri-pod
+  template:
+    metadata:
+      labels:
+        app: eversonbri-pod
+    spec:
+      containers:
+        - name: eversonbri-container
+          image: grsqygwqjecz/teste:1.0
+          ports:
+            - containerPort: 8080
