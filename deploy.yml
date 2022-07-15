@@ -1,22 +1,19 @@
-# 2022 version
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: qsk-deploy
+  name: eversonbri-deployment
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
-      project: qsk-book
+      app: eversonbri-pod
   template:
     metadata:
       labels:
-        project: qsk-book
-    spec: 
+        app: eversonbri-pod
+    spec:
       containers:
-      - name: qsk-pod
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 8080
-        image: grsqygwqjecz/useall:1.0
-
+        - name: eversonbri-container
+          image: grsqygwqjecz/teste:1.0
+          ports:
+            - containerPort: 80
